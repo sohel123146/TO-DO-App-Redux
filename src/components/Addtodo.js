@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addTodo } from "../redux/todo/todoSlice";
+import { addTodo } from "../redux/todo/todoSlice"; //importing addTodo function from redux
 import Todoitem from "./todoItem";
 
 const Addtodo = () => {
     // eslint-disable-next-line no-unused-vars
   const [text,setText] = useState('')
-  const todo = useSelector((state) => state.todo.value);
+  const todo = useSelector((state) => state.todo.value); //getting (todo reducer) todo from store.js
   const dispatch = useDispatch();
 
   const handleAddtodo = (e) => {
